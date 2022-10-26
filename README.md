@@ -2,6 +2,9 @@ Nombre: Diego Navarro Cuevas
 
 Estructura de las relaciones: (Clase1, clase2)= tipo de relacion(Clase1: multiplicidad / Clase2: multiplicidad)
 
+NOTA IMPORTANTE: el merge a la rama Master lo hice a una hora que no corresponde ya que en el momento se me olvido, por lo que lo hice apenas me di cuenta
+de mi error, disculpen las molestias
+
 Caso 1:
     Clases: Jugador, partido, gol
     Relaciones: (Jugador-partido)= Asociacion bidireccional(Jugador: 0..* / partido: 0..*)
