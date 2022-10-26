@@ -3,16 +3,15 @@ Nombre: Diego Navarro Cuevas
 Estructura de las relaciones: (Clase1, clase2)= tipo de relacion(Clase1: multiplicidad / Clase2: multiplicidad)
 
 Caso 1:
-    Clases: Jugadores, partidos, goles 
-    Relaciones: (Jugadores-partidos)= Asociacion bidireccional(Jugadores: * / partidos: *)
-                (partidos♦-goles)= Agregacion (Partidos: *)
-                (Jugadores♦-goles)= Agregacion (Jugador: *)
+    Clases: Jugador, partido, gol
+    Relaciones: (Jugador-partido)= Asociacion bidireccional(Jugador: 0..* / partido: 0..*)
+                (partido♦-gol)= Agregacion (Partido: 0..*)
+                (Jugador♦-gol)= Agregacion (Jugador: 0..*)
 Caso 2:
-    Clases:  empresaNaviera, buques, buquesDeBaja, partesBuquesDeBaja, astillero, comprarBuques, darDeBaja
-    Relaciones: (empresaNaviera♦-buques)= Agregacion (empresaNaviera: 10..*)
-                (empresaNaviera->comprarBuques)= Dependencia (empresaNaviera: 1..*)
-                (empresaNaviera->darDeBaja)= Dependencia (empresaNaviera: 1..*)
-                (buquesDeBaja♦-partesBuquesDeBaja)= Agregacion (buquesDeBaja: 1..*)
+    Clases:  empresaNaviera, buques, buquesDeBaja, partesBuquesDeBaja, astillero, 
+    Relaciones: (empresaNaviera♦-buques)= Composicion (empresaNaviera: 1..*)
+                (buquesDeBaja♦-partesBuquesDeBaja)= Agregacion (buquesDeBaja: 0..*)
+                (astillero♦-partesBuquesDeBaja)= Agregacion (astillero: 0..*) 
 
 Caso 3:
     Clases: pedido, mesero
